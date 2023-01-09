@@ -1,0 +1,37 @@
+<div class="w-1/2 bg-blue-100 mx-auto">
+    <div class="border bg-blue-300 w-1/2 mx-auto text-center py-4">
+        <h1>USO DE PIPES</h1>
+        <br>
+        <div>
+            <label for="valor">Valor: </label>
+            <input type="text" name="valor" id="valor" [(ngModel)]="palabra">
+        </div>
+        <br>
+        <div>
+            <p><span class="font-bold">Resultado: </span>{{palabra | uppercase}}</p>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="border bg-blue-300 w-1/2 mx-auto text-center py-4">
+        <h1>CURRENCY PIPES</h1>
+        <br>
+        <div>
+            <label for="monto">Valor: </label>
+            <input type="text" name="monto" id="monto" [(ngModel)]="monto">
+        </div>
+        <br>
+        <div>
+            <select name="" id="">
+                <option value="">Seleccione el tipo de moneda</option>
+                <option value="dolar">USD</option>
+                <option value="euro">EUR</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            <p><span class="font-bold">Resultado: </span>{{monto | currency}}</p>
+        </div>
+    </div>
+</div>
