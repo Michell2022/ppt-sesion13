@@ -1,7 +1,7 @@
 <div class="fondoPantalla">
-    <div class="h-screen flex items-center justify-center flex-wrap  md:justify-evenly">
-        <div class="bg-white px-12 py-6 rounded-xl shadow-[0px_0px_15px_0px_rgba(59,130,246,0.5)]">
-            <h1 class="text-center font-bold text-lg">USO DE PIPES</h1>
+    <div class="problematica">
+        <div class="bg-white px-12 py-6 rounded-xl mx-6 my-6 shadow-[0px_0px_15px_0px_rgba(59,130,246,0.5)]">  
+            <h1 class="text-center font-bold text-lg">UPPERCASE PIPE</h1>
             <br>
             <div>
                 <label for="valor">Valor: </label>
@@ -14,7 +14,7 @@
             </div>
         </div>
         <br>
-        <div class="bg-white px-12 py-6 rounded-xl shadow-[0px_0px_15px_0px_rgba(59,130,246,0.5)]">
+        <div class="bg-white px-12 py-6 mx-6 my-6 rounded-xl shadow-[0px_0px_15px_0px_rgba(59,130,246,0.5)]">
             <h1 class="text-center font-bold text-lg">CURRENCY PIPES</h1>
             <br>
             <div>
@@ -39,6 +39,15 @@
                         <span *ngSwitchDefault>(No eligió operación)</span>
                     </span>
                 </p>
+            </div>
+        </div>
+        <br>
+        <div class="bg-white px-12 py-6 rounded-xl mx-6 my-6 shadow-[0px_0px_15px_0px_rgba(59,130,246,0.5)]">
+            <div>
+                <h1 class="text-center font-bold text-lg pb-5 ">JSON PIPES</h1>
+                <ul *ngFor="let numero of myobjeto">
+                    <pre>{{ numero | json }}</pre>
+                </ul>
             </div>
         </div>
     </div>

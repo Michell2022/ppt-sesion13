@@ -1,3 +1,34 @@
 .fondoPantalla{
     background: linear-gradient(90deg, rgba(180,244,255,1) 0%, rgba(174,191,255,1) 50%, rgba(255,192,192,1) 100%);
 }
+
+.problematica{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+@media(max-width:576px){
+    .problematica{
+        display: flex;
+        flex-direction:column;
+    }
+}
+
+@media(min-width:576px){
+    .problematica{
+        display: flex;
+        flex-direction:column;
+    }
+}
+
+@media(min-width:768px){
+    .problematica{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
