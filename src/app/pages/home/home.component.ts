@@ -11,4 +11,6 @@ export class HomeComponent {
 
   monto!:number;
 
+  opciones!:string;
+
 }
