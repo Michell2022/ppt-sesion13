@@ -1,43 +1,45 @@
-<div class="w-1/2 bg-blue-100 mx-auto">
-    <div class="border bg-blue-300 w-1/2 mx-auto text-center py-4">
-        <h1>USO DE PIPES</h1>
-        <br>
-        <div>
-            <label for="valor">Valor: </label>
-            <input type="text" name="valor" id="valor" [(ngModel)]="palabra">
+<div class="fondoPantalla">
+    <div class="h-screen flex items-center justify-center flex-wrap  md:justify-evenly">
+        <div class="bg-white px-12 py-6 rounded-xl shadow-[0px_0px_15px_0px_rgba(59,130,246,0.5)]">
+            <h1 class="text-center font-bold text-lg">USO DE PIPES</h1>
+            <br>
+            <div>
+                <label for="valor">Valor: </label>
+                <input type="text" name="valor" id="valor" [(ngModel)]="palabra"
+                    class="border border-blue-300 rounded outline-none pl-1 py-1">
+            </div>
+            <br>
+            <div>
+                <p><span class="font-bold">Resultado: </span>{{palabra | uppercase}}</p>
+            </div>
         </div>
         <br>
-        <div>
-            <p><span class="font-bold">Resultado: </span>{{palabra | uppercase}}</p>
-        </div>
-    </div>
-
-    <br>
-
-    <div class="border bg-blue-300 w-1/2 mx-auto text-center py-4">
-        <h1>CURRENCY PIPES</h1>
-        <br>
-        <div>
-            <label for="monto">Valor: </label>
-            <input type="number" name="monto" id="monto" [(ngModel)]="monto">
-        </div>
-        <br>
-        <div>
-            <select [(ngModel)]="opciones">
-                <option value="ninguna">Seleccione el tipo de moneda </option>
-                <option value="dolar">USD</option>
-                <option value="euro">EUR</option>
-            </select>
-        </div>
-        <br>
-        <div>
-            <p> <span class="font-bold">Resultado: </span> 
-                <span [ngSwitch]="opciones">
-                    <span *ngSwitchCase="'dolar'">{{monto | currency:'USD':true}}</span>
-                    <span *ngSwitchCase="'euro'">{{monto | currency:'EUR':true}}</span>
-                    <span *ngSwitchDefault>(No eligió operación)</span>
-                </span>
-            </p>
+        <div class="bg-white px-12 py-6 rounded-xl shadow-[0px_0px_15px_0px_rgba(59,130,246,0.5)]">
+            <h1 class="text-center font-bold text-lg">CURRENCY PIPES</h1>
+            <br>
+            <div>
+                <label for="monto">Valor: </label>
+                <input type="number" name="monto" id="monto" [(ngModel)]="monto"
+                    class="border border-blue-300 rounded outline-none pl-1 py-1">
+            </div>
+            <br>
+            <div>
+                <select class="border border-zinc-400 rounded outline-none" [(ngModel)]="opciones">
+                    <option value="ninguna">Seleccione el tipo de moneda</option>
+                    <option value="dolar">USD</option>
+                    <option value="euro">EUR</option>
+                </select>
+            </div>
+            <br>
+            <div>
+                <p class="mt-12"> <span class="font-bold">Resultado: </span>
+                    <span [ngSwitch]="opciones">
+                        <span *ngSwitchCase="'dolar'">{{monto | currency:'USD':true}}</span>
+                        <span *ngSwitchCase="'euro'">{{monto | currency:'EUR':true}}</span>
+                        <span *ngSwitchDefault>(No eligió operación)</span>
+                    </span>
+                </p>
+            </div>
         </div>
     </div>
 </div>
