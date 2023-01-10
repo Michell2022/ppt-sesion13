@@ -36,7 +36,7 @@
                     <span [ngSwitch]="opciones">
                         <span *ngSwitchCase="'dolar'">{{monto | currency:'USD':true}}</span>
                         <span *ngSwitchCase="'euro'">{{monto | currency:'EUR':true}}</span>
-                        <span *ngSwitchDefault>(No eligió operación)</span>
+                        <span *ngSwitchDefault>(No eligió una opción)</span>
                     </span>
                 </p>
             </div>
